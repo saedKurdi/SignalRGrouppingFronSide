@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="rooms">
+      <div>
+        <input placeholder="Username" type="text" id="user" />
+      </div>
+      <div id="btnContainer">
+        <button id="btn1" onclick="joinRoom('chevrolet')">
+          Join Chevrolet
+        </button>
+        <button id="btn2" onclick="joinRoom('bmw')">Join BMW</button>
+        <button id="btn3" onclick="joinRoom('mercedes')">Join Mercedes</button>
+      </div>
+      <button id="exitBtn" style="display: none" onclick="exitRoom()">
+        Exit Room
+      </button>
+    </div>
+
+    <div id="room">
+      <h2 id="info"></h2>
+
+      <div style="display: none" id="timer-container">
+        <h2>Time : <span id="timer"></span></h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column">
+        <h1 id="offerValue" style="margin: 20px"></h1>
+        <h1 id="offerValue2" style="margin: 20px"></h1>
+        <h1 id="offerValue3" style="margin: 20px"></h1>
+      </div>
+
+      <button style="display: none" id="offerBtn" onclick="increaseOffer()">
+        Increase Offer
+      </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
